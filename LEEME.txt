@@ -1,7 +1,0 @@
-AGENCIA MARÍTIMA PORTILLO — REDISEÑO HTML
-
-1. Descomprime el ZIP completo.
-2. Abre index.html con Chrome, Edge o Firefox.
-3. No muevas ni renombres la carpeta assets: contiene el logotipo SVG y las imágenes locales.
-
-El diseño se adapta a ordenador, tablet y móvil. El menú móvil es funcional. El teléfono y el correo abren sus aplicaciones correspondientes. Los enlaces de noticias y secciones son demostrativos y deben conectarse a las páginas reales antes de publicar.
