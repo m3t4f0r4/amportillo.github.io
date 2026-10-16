@@ -1,0 +1,9 @@
+{
+  "name": "portillo-cms",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web corporativa y CMS para Agencia Mar\u00edtima Portillo",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
