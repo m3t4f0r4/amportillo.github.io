@@ -96,3 +96,11 @@ body{font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing
 @media(max-width:820px){.hero-image{object-position:58% center}}
 @media(max-width:540px){.hero-image{object-position:60% center}}
 .about-visual img{image-rendering:auto}
+
+/* Acceso al panel de administración */
+.admin-shortcut{display:inline-flex;align-items:center;gap:8px;flex-shrink:0;padding:10px 12px;border:1px solid #dce5ef;border-radius:12px;color:#173b5d;background:#fff;font-size:12px;font-weight:750;transition:background .2s,border-color .2s,transform .2s}
+.admin-shortcut svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.admin-shortcut:hover{background:#f2f7fc;border-color:#a9bfd4;transform:translateY(-1px)}
+.header-inner{gap:18px}
+@media(max-width:1080px){.admin-shortcut{padding:10px}.admin-shortcut span{display:none}.admin-shortcut svg{width:20px;height:20px}}
+@media(max-width:760px){.header-inner{gap:10px}.admin-shortcut{margin-left:auto;padding:9px;border-radius:10px}.admin-shortcut span{display:none}.menu-toggle{flex-shrink:0}}

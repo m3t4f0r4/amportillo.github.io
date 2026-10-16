@@ -1,6 +1,16 @@
 (() => {
   const $ = (s, root=document) => root.querySelector(s);
   const $$ = (s, root=document) => [...root.querySelectorAll(s)];
+  // Aplica los ajustes guardados desde el panel en este navegador (prototipo estático).
+  try {
+    const settings = JSON.parse(localStorage.getItem('portilloAdminSettings') || 'null');
+    if (settings) {
+      if (settings.heroLead) { const lead=$('.hero-lead'); if(lead) lead.textContent=settings.heroLead; }
+      if (settings.phone) { $$('a[href^="tel:"]').forEach(a=>{ if(a.textContent.includes('956') || a.textContent.includes('+34')) a.textContent=settings.phone; }); }
+      if (settings.email) { $$('a[href^="mailto:"]').forEach(a=>{ if(a.textContent.includes('info@amportillo.com')) a.textContent=settings.email; }); }
+      if (Array.isArray(settings.news)) { const cards=$$('.news-card'); settings.news.slice(0,cards.length).forEach((item,i)=>{ const card=cards[i]; const h=card.querySelector('h3'), p=card.querySelector('.news-content p'); if(h && item.title) h.textContent=item.title; if(p && item.summary) p.textContent=item.summary; }); }
+    }
+  } catch(e) { console.warn('No se han podido aplicar los ajustes locales del panel.',e); }
   const menuToggle = $('#menuToggle'), nav = $('#mainNav');
   menuToggle.addEventListener('click', () => {
     const open = nav.classList.toggle('open');
